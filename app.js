@@ -29,11 +29,11 @@ app.post("/", function(req, res) { //don't forget to have an action="/" and meth
   };
   const jsonData = JSON.stringify(data); //transform the data into string
 
-  const url = "https://us11.api.mailchimp.com/3.0/lists/4ae726df1c";
+  const url = "https://usX.api.mailchimp.com/3.0/lists/ID";
 
   const options = {
     method: "POST",
-    auth: "tina:3757cc8b8f88efd79285cd51a4ea7e29-us11"//api key
+    auth: "tina:API-usX"//api key
   };
 
   const request = https.request(url, options, function(response) {
@@ -61,9 +61,3 @@ app.post("/failure", function(req, res){
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000.")
 });
-
-//api
-//3757cc8b8f88efd79285cd51a4ea7e29-us11
-
-//audience id
-//4ae726df1c
